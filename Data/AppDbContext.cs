@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PruebaTecnicaAPI.Models;
 
 namespace PruebaTecnicaAPI.Data
 {
@@ -7,5 +8,8 @@ namespace PruebaTecnicaAPI.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+
+        public DbSet<Machine> Machines => Set<Machine>();
+        public DbSet<Component> Components => Set<Component>();
     }
 }
